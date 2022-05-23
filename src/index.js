@@ -1,17 +1,32 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import ReactDOM from 'react-dom';
+import PromptForm from './components/PromptForm';
+import Results from './components/Result';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+function App () {
+
+  // prompt/text that user enters
+  const[inputText, setInputText] = React.useState(""); 
+
+  // results to show.. input with response
+  const[prompt, setPrompt] = React.useState([]);
+
+  return (
+    <div className="App">
+      <header>
+        <h1>Talk to me! I'm AI</h1>
+      </header>
+      <PromptForm 
+        inputText={inputText} 
+        prompt={prompt}
+        setPrompt={setPrompt}
+        setInputText={setInputText}/>    
+      <Results prompt={prompt}/>
+    </div>
+  )
+}
+
+ReactDOM.render(<App />, document.getElementById('root'));
+
+export default App;

@@ -1,0 +1,61 @@
+Button {
+    color: #e0876a;
+    background-color: white;
+    border: 2px solid #e0876a;
+    font-size: 1em;
+    margin: 1em;
+    padding: 0.25em 1em;
+    border-radius: 3px;
+}
+
+.App {
+    text-align: center;
+}
+
+Button:hover{
+    opacity: 0.6;
+}
+
+html {
+    background-color: #f9ccac;
+}
+
+textarea {
+    background-color: #f9ccac;
+    padding: 14px 32px 14px 16px;
+    border: 2px solid #e0876a;
+    border-radius: 4px 0 0 4px;
+    width: 350px;
+    height: 200px;
+}
+
+
+.results-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.results-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 4px auto;
+    background: #f4a688;
+    padding: 15px;
+    border-radius: 20px;
+    width: 60%;
+}
+
+.App {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 70%;
+    min-height: 70%;
+    background:#fbefcc;
+    text-align: center;
+    margin: 128px auto;
+    border-radius: 10px;
+    padding-bottom: 32px;
+}
